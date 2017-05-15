@@ -10,25 +10,21 @@ Nicknames: rutebarbalho; claraabandeira; tuaneperes
    <p> Para executar qualquer código JavaScript em SpiderMonkey, um projeto deve ter três elementos-chave : a JSRuntime , um JSContext e um objeto global.</p>
     <p><b>JSRuntime:</b> é o espaço no qual as variáveis de JavaScript, objetos, scripts e contextos (que serão explicados mais a frente) usados pelo seu aplicativo são alocados. Normalmente, os aplicativos só precisam de um tempo de execução (runtime).</p>
    <p> <b>JSContext:</b> É o compilador JavaScript. Este maquinário interpreta as funções, scripts, objetos e dados referidos no código. Pode-se conter apenas um contexto por aplicativo, mas o desenvolvedor deve estar ciente que o compilador só executa uma função de cada vez, o que torna a compilação lenta. Por isso aconcelha-se o uso de vários contextos para cada área do código.</p>
-   #### Sintaxe Básica ####
+   #### Sintaxe Básica 
    <p>Construindo a aplicação:</p>
    <p><b>Usando o js-config script: </b></p>
    <p> Para conectar o seu script a biblioteca SpiderMonkey use um script chamado js-config, que pode conecta-lo a diversas configurações:</p>
    <p>Quando usado com --cflags, o js-config imprime as partes de acordo com a linguagem C. Já quando usado a opção --libs as partes que devem ser impressas de acordo com a linguagem C quando relacionado a uma biblioteca que usa SpiderMonkey.   </p>
   <p>--csflag:</p>
-  `
-   $ ./js-config --cflags # Example output: -I/usr/local/include/js -I/usr/include/nspr
-   `
+  ` $ ./js-config --cflags # Example output: -I/usr/local/include/js -I/usr/include/nspr `
    <p>--libs:</p>
-   `
-   $ ./js-config --libs # Example output: -L/usr/local/lib -lmozjs -L/usr/lib -lplds4 -lplc4 -lnspr4 -lpthread -ldl -ldl -lm  -lm -ldl
-   `
+   ` $ ./js-config --libs # Example output: -L/usr/local/lib -lmozjs -L/usr/lib -lplds4 -lplc4 -lnspr4 -lpthread -ldl -ldl -lm  -lm -ldl`
    <p>Testando o SpiderMonkey:</p>
    <p>Existem 3 maneiras de testar um codigo que utiliza SpiderMonkey:</p>
    <p>${BUILDDIR}/dist/bin/js nomedoprograma.js</p>
    <p> Para rodar o teste principal, usa-se ./tests/jstests.py ${BUILDDIR}/dist/bin/js</p>
    <p>Para rodar um teste JIT especifico, usa-se ./jit-test/jit_test.py ${BUILDDIR}/dist/bin/js </p>
-    #### Sintaxe Funcional ####
+    #### Sintaxe Funcional 
    <p> Segue exemplo da codificação para um simples "Hello Word", para fins de melhor entendimento e explicação de funções:</p>
   
  ```    
