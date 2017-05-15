@@ -110,7 +110,7 @@ function Funcionario() {
 
 #### Métodos ####
 <p>É uma subrotina ou função associada a uma classe, para definir um método, tem de se atribuir uma função a uma propriedade com nome do 'prototype' da classe.</p>
-<p>Exemplo:/p>
+<p>Exemplo:</p>
 Funcionario.prototype.getIdade = function () {
     return idade;
 };
@@ -137,7 +137,7 @@ Vendedor.prototype = new Funcionário();
 
 #### Sobrecarga ####
 <p>Criar variações de um mesmo método, usando funções diferentes para cada um, fazendo referência aos ojetos atuais utilizando 'this'.</p>
-Exemplo:
+<p>Exemplo:</p>
 Fucionario.exibirNome = function() {
 	if (arguments.length == 1) this.setNome(arguments[0]);
 	return this.nome;
