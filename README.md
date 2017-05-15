@@ -102,35 +102,35 @@ int main(int argc, const char *argv[]) /* Inicia o JS */
 #### Atributo ####
 <p>Uma característica do objeto. Faz- se referencia ao objeto atual, utilizando 'var' o atributo será privado e 'this' será público.</p>
 <p>Exemplo:</p>
-'function Funcionario() {
+function Funcionario() {
     var nome;
 
     this.idade;
-}'
+}
 
 #### Métodos ####
 <p>É uma subrotina ou função associada a uma classe, para definir um método, tem de se atribuir uma função a uma propriedade com nome do 'prototype' da classe.</p>
 <p>Exemplo:/p>
-'Funcionario.prototype.getIdade = function () {
+Funcionario.prototype.getIdade = function () {
     return idade;
-};'
+};
 
 #### Construtores ####
 <p>Ele geralmente tem o mesmo nome da classe que o contém, nele definimos as propriedades do objeto ou chamamos metodos que preparem o objeto para o uso.</p>
 <p>Exemplo:</p>
-'var Funcionario = function () {
+var Funcionario = function () {
   console.log("Funcionário criado");
 }
 
 var funcionario1 = new Funcionario();
-var funcionario2 = new Funcionario();'
+var funcionario2 = new Funcionario();
 
 #### Herança ####
 <p>Cria-se uma nova classe, e dentro dela conterá o 'prototype' da classe que fará referência a classe Pai.</p>
 <p>Exemplo:</p>
-'function Vendedor() {
+function Vendedor() {
 Vendedor.prototype = new Funcionário();
-}'
+}
 
 #### Polimorfismo ####
 
