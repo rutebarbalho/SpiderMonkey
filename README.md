@@ -147,10 +147,10 @@ Funcionario.setNome = function(novoNome){
 	this.nome = novoNome;
 }
 
-#### Categorias de exeções ####
+#### Categorias de exceções ####
 
 #### Captura e lançamento de exceções ####
 <p>Lança-se execeções usa-se 'Throw' e para tratá-las 'try-catch'.</p>
 
-#### Criar novas exeções ####
+#### Criar novas exceções ####
     
