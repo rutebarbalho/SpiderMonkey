@@ -92,7 +92,7 @@ int main(int argc, const char *argv[]) /* Inicia o JS */
 #### Classe ####
 <p>Define a classe como uma váriavel com valor de função.</p>
 <p>Exemplo:</p>
-'var Funcionario = function () {};'
+' var Funcionario = function () {}; '
 
 #### Objeto ####
 <p>Usamos a declaração new obj, atribuindo o resultado (que é do tipo obj) a uma variável que será acessada depois.</p>
