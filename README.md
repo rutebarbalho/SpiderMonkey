@@ -10,7 +10,7 @@ Nicknames: rutebarbalho; claraabandeira; tuaneperes
    <p> Para executar qualquer código JavaScript em SpiderMonkey, um projeto deve ter três elementos-chave : a JSRuntime , um JSContext e um objeto global.</p>
     <p><b>JSRuntime:</b> é o espaço no qual as variáveis de JavaScript, objetos, scripts e contextos (que serão explicados mais a frente) usados pelo seu aplicativo são alocados. Normalmente, os aplicativos só precisam de um tempo de execução (runtime).</p>
    <p> <b>JSContext:</b> É o compilador JavaScript. Este maquinário interpreta as funções, scripts, objetos e dados referidos no código. Pode-se conter apenas um contexto por aplicativo, mas o desenvolvedor deve estar ciente que o compilador só executa uma função de cada vez, o que torna a compilação lenta. Por isso aconcelha-se o uso de vários contextos para cada área do código.</p>
-   #### Sintaxe Básica 
+   #### Sintaxe Básica ####
    <p>Construindo a aplicação:</p>
    <p><b>Usando o js-config script: </b></p>
    <p> Para conectar o seu script a biblioteca SpiderMonkey use um script chamado js-config, que pode conecta-lo a diversas configurações:</p>
@@ -24,7 +24,7 @@ Nicknames: rutebarbalho; claraabandeira; tuaneperes
    <p>${BUILDDIR}/dist/bin/js nomedoprograma.js</p>
    <p> Para rodar o teste principal, usa-se ./tests/jstests.py ${BUILDDIR}/dist/bin/js</p>
    <p>Para rodar um teste JIT especifico, usa-se ./jit-test/jit_test.py ${BUILDDIR}/dist/bin/js </p>
-    #### Sintaxe Funcional 
+    #### Sintaxe Funcional ####
    <p> Segue exemplo da codificação para um simples "Hello Word", para fins de melhor entendimento e explicação de funções:</p>
   
  ```    
@@ -87,4 +87,70 @@ int main(int argc, const char *argv[]) /* Inicia o JS */
     return 0;
 }
 ```
+## Sintaxe OO ##
+
+#### Classe ####
+<p>Define a classe como uma váriavel com valor de função.</p>
+<p>Exemplo:</p>
+'var Funcionario = function () {};'
+
+#### Objeto ####
+<p>Usamos a declaração new obj, atribuindo o resultado (que é do tipo obj) a uma variável que será acessada depois.</p>
+<p>Exemplo:</p>
+'var funcionario1 = new Funcionario();'
+
+#### Atributo ####
+<p>Uma característica do objeto. Faz- se referencia ao objeto atual, utilizando 'var' o atributo será privado e 'this' será público.</p>
+<p>Exemplo:</p>
+'function Funcionario() {
+    var nome;
+
+    this.idade;
+}'
+
+#### Métodos ####
+<p>É uma subrotina ou função associada a uma classe, para definir um método, tem de se atribuir uma função a uma propriedade com nome do 'prototype' da classe.</p>
+<p>Exemplo:/p>
+'Funcionario.prototype.getIdade = function () {
+    return idade;
+};'
+
+#### Construtores ####
+<p>Ele geralmente tem o mesmo nome da classe que o contém, nele definimos as propriedades do objeto ou chamamos metodos que preparem o objeto para o uso.</p>
+<p>Exemplo:</p>
+'var Funcionario = function () {
+  console.log("Funcionário criado");
+}
+
+var funcionario1 = new Funcionario();
+var funcionario2 = new Funcionario();'
+
+#### Herança ####
+<p>Cria-se uma nova classe, e dentro dela conterá o 'prototype' da classe que fará referência a classe Pai.</p>
+<p>Exemplo:</p>
+'function Vendedor() {
+Vendedor.prototype = new Funcionário();
+}'
+
+#### Polimorfismo ####
+
+
+#### Sobrecarga ####
+<p>Criar variações de um mesmo método, usando funções diferentes para cada um, fazendo referência aos ojetos atuais utilizando 'this'.</p>
+Exemplo:
+Fucionario.exibirNome = function() {
+	if (arguments.length == 1) this.setNome(arguments[0]);
+	return this.nome;
+};
+
+Funcionario.setNome = function(novoNome){
+	this.nome = novoNome;
+}
+
+#### Categorias de exeções ####
+
+#### Captura e lançamento de exceções ####
+<p>Lança-se execeções usa-se 'Throw' e para tratá-las 'try-catch'.</p>
+
+#### Criar novas exeções ####
     
