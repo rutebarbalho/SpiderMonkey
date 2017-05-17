@@ -3,7 +3,7 @@ Componentes: Rute da Silva Barbalho (20141011110123), Clara Alice Bandeira de Mo
 Nicknames: rutebarbalho; claraabandeira; tuaneperes
 
 #### Resumo ####
-  SpiderMonkey é utilizado como um motor do Mozilla, ele compila e executa scripts que contêm instruções e funções de JavaScript, lidando com a alocação de memória para os objetos necessários para executar scripts, e ele tabém limpa o lixo e recolhe os objetos que já não são necessários. Criada em 1995 pela Netscape e mantida atualmente pala Mozilla Foundation.
+  SpiderMonkey é utilizado como um motor do Mozilla, ele compila e executa scripts que contêm instruções e funções de JavaScript, lidando com a alocação de memória para os objetos necessários para executar scripts, e ele também limpa o lixo e recolhe os objetos que já não são necessários. Criada em 1995 pela Netscape e mantida atualmente pela Mozilla Foundation.
 #### Instalação e Uso ####
 
   <p> Para utilização do SpiderMonkey, caso o projeto seja em C++ ou C, será necessario fazer o download do plugin no Firefox (na aba "Aplicativos") e a inclusão do JSAPI, utilizando o cabeçalho `jsapi.h`. Porém alguns sistemas como Debian fornecem o SpiderMonkey como pacote pré construído.</p>
